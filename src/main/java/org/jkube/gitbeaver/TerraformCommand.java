@@ -14,7 +14,7 @@ public class TerraformCommand extends AbstractCommand {
     private static final String TERRAFORM_BINARY = "/usr/bin/terraform";
 
     public TerraformCommand() {
-        super(2, null, "terraform");
+        super(1, null, "terraform");
     }
 
     @Override
