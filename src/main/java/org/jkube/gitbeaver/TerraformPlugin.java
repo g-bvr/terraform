@@ -9,9 +9,7 @@ public class TerraformPlugin extends SimplePlugin {
 
     private final static String TF_VERSION = "1.3.6";
     public TerraformPlugin() {
-        super(
-                TerraformCommand.class
-        );
+        super("allows issuing of terraform commands", TerraformCommand.class);
     }
 
     @Override
