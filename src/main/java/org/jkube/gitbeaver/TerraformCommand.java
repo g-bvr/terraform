@@ -13,7 +13,7 @@ public class TerraformCommand extends AbstractCommand {
      * For security reasons we specify absolute path to binaries (instead of adding their location
      * in the path environment variablde, so that one cannot temper with which binary is going top be executed)
      */
-    private static final String TERRAFORM_BINARY = "/usr/bin/terraform";
+    static final String TERRAFORM_BINARY = "/usr/bin/terraform";
 
     public TerraformCommand() {
         super("Execute terraform command");
