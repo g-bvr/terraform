@@ -60,13 +60,15 @@ Execute terraform command
 <h2>Variants</h2>
 <table id="mytable1">
 <tr><th>Usage</th><th>Description</th></tr>
-  <tr><td>TERRAFORM *</td><td>Execute terraform command</td></tr>
+  <tr><td>TERRAFORM INTO folder *</td><td>execute a terraform command and store logs, warnings and errors into text files in a folder</td></tr>
+  <tr><td>TERRAFORM *</td><td>execute a terraform command</td></tr>
 </table>
 
 <h2>Arguments</h2>
 
 <table id="mytable2">
 <tr><th>Argument</th><th>Value</th></tr>
+  <tr><td>folder</td><td>a folder (relative to current workspace) in which the following files will be created: logs.txt, warnings.txt, errors.txt</td></tr>
   <tr><td>*</td><td>the command to be executed (the commandline arguments to be passed to the terraform executable)</td></tr>
 </table>
 <h2>Plugin</h2>
