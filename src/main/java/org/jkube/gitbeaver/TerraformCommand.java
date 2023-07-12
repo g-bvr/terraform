@@ -2,6 +2,7 @@ package org.jkube.gitbeaver;
 
 import org.jkube.gitbeaver.util.ExternalProcess;
 import org.jkube.gitbeaver.util.FileUtil;
+import org.jkube.logging.Log;
 
 import java.nio.file.Path;
 import java.util.List;
@@ -38,6 +39,11 @@ public class TerraformCommand extends AbstractCommand {
         String folder = arguments.get(OUTPUT_FOLDER);
         if (folder != null) {
             storeOutput(terraform, workSpace.getAbsolutePath(folder));
+        }
+        if (terraform.hasFailed()) {
+            String message = terraform.getErrors().stream().findFirst().orElse("no message");
+            Log.warn("Terraform failed: {}", message);
+            throw new RuntimeException("Terraform failed: "+message);
         }
     }
 
