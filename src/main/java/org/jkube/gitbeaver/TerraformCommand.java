@@ -49,9 +49,9 @@ public class TerraformCommand extends AbstractCommand {
 
     private void storeOutput(ExternalProcess terraform, Path folder) {
         FileUtil.createIfNotExists(folder);
-        FileUtil.store(folder.resolve("logs.txt"), terraform.getOutput());
-        FileUtil.store(folder.resolve("warnings.txt"), terraform.getWarnings());
-        FileUtil.store(folder.resolve("errors.txt"), terraform.getErrors());
+        FileUtil.append(terraform.getOutput(), folder.resolve("logs.txt").toFile());
+        FileUtil.append(terraform.getWarnings(), folder.resolve("warnings.txt").toFile());
+        FileUtil.append(terraform.getErrors(), folder.resolve("errors.txt").toFile());
     }
 
 }
