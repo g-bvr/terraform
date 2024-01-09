@@ -7,7 +7,7 @@ import java.util.List;
 
 public class TerraformPlugin extends SimplePlugin {
 
-    private final static String TF_VERSION = "1.5.3";
+    private final static String TF_VERSION = "1.6.6";
     public TerraformPlugin() {
         super("allows issuing of terraform commands",
                 TerraformOutputCommand.class,
