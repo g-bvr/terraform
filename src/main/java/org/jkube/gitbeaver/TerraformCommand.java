@@ -2,7 +2,7 @@ package org.jkube.gitbeaver;
 
 import org.jkube.gitbeaver.util.ExternalProcess;
 import org.jkube.gitbeaver.util.FileUtil;
-import org.jkube.logging.Log;
+import org.jkube.gitbeaver.logging.Log;
 
 import java.nio.file.Path;
 import java.util.List;

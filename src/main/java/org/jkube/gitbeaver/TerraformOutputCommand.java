@@ -2,7 +2,7 @@ package org.jkube.gitbeaver;
 
 import org.jkube.gitbeaver.util.ExternalProcess;
 import org.jkube.gitbeaver.util.FileUtil;
-import org.jkube.util.Expect;
+import org.jkube.gitbeaver.util.Expect;
 
 import java.util.List;
 import java.util.Map;
