@@ -22,7 +22,7 @@ public class TerraformOutputCommand extends AbstractCommand {
 
     @Override
     public void execute(Map<String, String> variables, WorkSpace workSpace, Map<String, String> arguments) {
-        ExternalProcess terraform = new ExternalProcess();
+        ExternalProcess terraform = new ExternalProcess(variables);
         terraform.command(TERRAFORM_BINARY, List.of("output"));
         List<String> result = terraform
                 .dir(workSpace.getWorkdir())

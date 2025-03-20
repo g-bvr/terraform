@@ -29,7 +29,7 @@ public class TerraformCommand extends AbstractCommand {
 
     @Override
     public void execute(Map<String, String> variables, WorkSpace workSpace, Map<String, String> arguments) {
-        ExternalProcess terraform = new ExternalProcess();
+        ExternalProcess terraform = new ExternalProcess(variables);
         terraform.command(TERRAFORM_BINARY, List.of(arguments.get(REST).split(" ")));
         terraform
                 .dir(workSpace.getWorkdir())
